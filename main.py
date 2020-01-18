@@ -6,9 +6,8 @@ def lettoreditag(s, tag):
     if tag in s:
         c = tag[0]
         for ch in s:
-            if ch == c:
-                if s[index:index + len(tag)] == tag:
-                    return index
+            if (ch == c) and (s[index:index + len(tag)] == tag):
+                return index
             index += 1
     return -1
 
